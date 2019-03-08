@@ -28,7 +28,7 @@ public class Application {
         System.setProperty("java.net.preferIPv4Stack", "true");
         ReferenceConfig<GenericService> reference = new ReferenceConfig<>();
         reference.setApplication(new ApplicationConfig("first-dubbo-client"));
-        reference.setRegistry(new RegistryConfig("zookeeper://127.0.0.1:2181"));
+        reference.setRegistry(new RegistryConfig("multicast://224.5.6.7:1234"));
 //        reference.setInterface(GreetingsService.class);
         reference.setGeneric(true);
         reference.setInterface("org.apache.dubbo.samples.api.GreetingsService");
